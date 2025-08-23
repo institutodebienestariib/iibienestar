@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institución Internacional de Bienestar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: linear-gradient(90deg, #602778, #007CC6, #E30612, #F58801, #FECB01, #A1C713, #4EAF32, #43BEEA);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    #toggle-theme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      color: #602778;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    #toggle-theme:hover {
+      background: #ddd;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+    section h2 {
+      color: #602778;
+      margin-bottom: 0.5rem;
+    }
+    .valores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .valor {
+      flex: 1 1 150px;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #007CC6;
+      transition: background 0.3s, color 0.3s;
+    }
+    footer {
+      background: #602778;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* --- Modo oscuro --- */
+    body.dark {
+      background-color: #1c1c1c;
+      color: #eaeaea;
+    }
+    body.dark section {
+      background: #2b2b2b;
+      color: #eaeaea;
+    }
+    body.dark section h2 {
+      color: #43BEEA;
+    }
+    body.dark .valor {
+      background: #3a3a3a;
+      color: #FECB01;
+    }
+    body.dark #toggle-theme {
+      background: #333;
+      color: #fff;
+    }
+    body.dark #toggle-theme:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button id="toggle-theme">Modo oscuro</button>
+    <h1>Institución Internacional de Bienestar</h1>
+    <p>Transformando vidas</p>
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Somos una institución educativa de carácter no formal, creada desde el amor y la convicción 
+      de que el bienestar integral es la base para una vida plena. Con un enfoque humanista, 
+      acompañamos a las personas en su camino de transformación personal, reconociéndolas 
+      como seres integrales de cuerpo, mente y espíritu.
+    </p>
+  </section>
+
+  <section>
+    <h2>Misión</h2>
+    <p>
+      Transformamos vidas cultivando bienestar a través de una educación de calidad e innovadora 
+      con un enfoque humanista que promueve el equilibrio entre mente, cuerpo y espíritu.
+    </p>
+  </section>
+
+  <section>
+    <h2>Visión</h2>
+    <p>
+      Para el año 2030, la Institución Internacional de Bienestar será reconocida a nivel global como 
+      una de las mejores instituciones en educación para el bienestar integral, impactando 
+      positivamente la vida de más de 100.000 estudiantes.
+    </p>
+  </section>
+
+  <section>
+    <h2>Valores</h2>
+    <div class="valores">
+      <div class="valor">Inspiración</div>
+      <div class="valor">Excelencia</div>
+      <div class="valor">Creatividad</div>
+      <div class="valor">Amor</div>
+      <div class="valor">Empatía</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Institución Internacional de Bienestar | Transformando vidas</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains('dark')){
+        toggleButton.textContent = "Modo claro";
+      } else {
+        toggleButton.textContent = "Modo oscuro";
+      }
+    });
+  </script>
+
+</body>
+</html>

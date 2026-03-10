@@ -462,6 +462,10 @@ body {
 
 /* --- Diseño Responsivo (Tus estilos) --- */
 @media screen and (max-width: 960px) {
+    .navbar{
+        height: 80px;
+    }
+
     .nav-menu {
         display: flex;
         flex-direction: column;
@@ -497,6 +501,10 @@ body {
     .menu-icon {
         display: block;
         cursor: pointer;
+    }
+
+    .hero-content {
+        margin-top: 100px;
     }
 
     .hero-content h1 {
@@ -1699,6 +1707,7 @@ body {
 
 .btn-primary:hover {
     background: #3498db;
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
